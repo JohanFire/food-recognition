@@ -13,7 +13,7 @@ from google.cloud import vision_v1p3beta1 as vision
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'client_key.json'
 
 # Source path content all images
-SOURCE_PATH = "E:/temp_uploads/Photos/Fruit/"
+SOURCE_PATH = "C:/Users/johan/OneDrive/Documentos/Github/food-recognition/test_images/"
 
 FOOD_TYPE = 'Fruit'  # 'Vegetable'
 
@@ -81,7 +81,7 @@ def recognize_food(img_path, list_foods):
 
 print('---------- Start FOOD Recognition --------')
 list_foods = load_food_name(FOOD_TYPE)
-print(list_foods)
+print(f'List of foods: \n{list_foods}\n')
 path = SOURCE_PATH + '1.jpg'
 recognize_food(path, list_foods)
 print('---------- End ----------')
